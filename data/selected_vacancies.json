@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Business Application Developer",
+    "place": "Москва",
+    "salary_lower_limit": 600000,
+    "salary_upper_limit": 1000000,
+    "salary_currency": "RUR",
+    "requirement": "Proven experience as an applications developer with expertise in <highlighttext>Python</highlighttext>3 and relational SQL databases. Experience with <highlighttext>Python</highlighttext> modules like...",
+    "responsibility": "Design, develop and maintain high-quality business applications using <highlighttext>Python</highlighttext> and SQL. Collaborate with cross-functional teams, including business users..."
+  },
+  {
+    "title": "Программист С++ Senior",
+    "place": "Москва",
+    "salary_lower_limit": 400000,
+    "salary_upper_limit": 700000,
+    "salary_currency": "RUR",
+    "requirement": "Опыт коммерческой разработки на С++ от 5-ти лет. Опыт работы с низкоуровневыми сетями, многопоточностью и асинхронностью. Опыт работы с...",
+    "responsibility": "Разработка приложений, работающих с биржевой инфраструктурой. Проектирование компонентов low-latency торговой платформы."
+  },
+  {
+    "title": "Инженер VMware (в Китай)",
+    "place": "Москва",
+    "salary_lower_limit": 400000,
+    "salary_upper_limit": 550000,
+    "salary_currency": "RUR",
+    "requirement": "Опыт управления кластерами и оптимизации производительности. Владение скриптовыми языками (например, PowerShell, <highlighttext>Python</highlighttext>) для задач автоматизации и администрирования. Отличные аналитические способности...",
+    "responsibility": "Проектирование, развертывание и управление инфраструктурой виртуализации VMware, включая узлы ESXi, vCenter Server и среды vSphere. Контроль производительности систем и использования..."
+  },
+  {
+    "title": "Verification Engineer",
+    "place": "Москва",
+    "salary_lower_limit": 250000,
+    "salary_upper_limit": 500000,
+    "salary_currency": "RUR",
+    "requirement": "Опыт в рамках перечисленных выше обязанностей хотя бы в одном проекте Spec2GDS. Знание и понимание аспектов Metric Driven...",
+    "responsibility": "Разрабатывать планы верификации IP и SoC. Разрабатывать и отлаживать UVM-based Verification IP и верификационные окружения. Разрабатывать и отлаживать модель..."
+  },
+  {
+    "title": "Архитектор DWH (удаленка в пределах РФ)",
+    "place": "Москва",
+    "salary_lower_limit": 350000,
+    "salary_upper_limit": 450000,
+    "salary_currency": "RUR",
+    "requirement": "В роли Team lead от 1 года. Опыт разработки и организации ETL на <highlighttext>Python</highlighttext> (Airflow, Nifi, Prefect - преимущество) от 2...",
+    "responsibility": "Проектирование и разработка корпоративного хранилища данных (Postgres, Greenplum). Загрузка данных из различных источников (внутренние БД, файловые хранилища, API, web-ресурсы). "
+  },
+  {
+    "title": "Python разработчик middle+ Senior",
+    "place": "Москва",
+    "salary_lower_limit": 250000,
+    "salary_upper_limit": 410000,
+    "salary_currency": "RUR",
+    "requirement": "оркестрации программно-определяемых СХД (SDS) и сетей (SDN). - уверенный <highlighttext>Python</highlighttext>-программист, умение писать хороший код на <highlighttext>Python</highlighttext>. - опыт работы с...",
+    "responsibility": "Проектировать и разрабатывать новый функционал в области: - интеллектуального мониторинга и самовосстановления всех элементов платформы (healthcheck, selfhealing). - Сопровождать и оптимизировать существующий..."
+  },
+  {
+    "title": "Дата инженер (удаленно)",
+    "place": "Москва",
+    "salary_lower_limit": 300000,
+    "salary_upper_limit": 400000,
+    "salary_currency": "RUR",
+    "requirement": "Владение языками программирования (SQL на уровне не ниже Middle, <highlighttext>Python</highlighttext>, либо другом скриптовом языке программирования). Опыт работы с планировщиками задач...",
+    "responsibility": "Участвовать в проектировании, создании, развертывании и управлении общей архитектуры платформы данных. Выстраивать процессы взаимодействия DWH и других компонент экосистемы данных..."
+  },
+  {
+    "title": "Разработчик С/С++",
+    "place": "Санкт-Петербург",
+    "salary_lower_limit": 250000,
+    "salary_upper_limit": 400000,
+    "salary_currency": "RUR",
+    "requirement": "Oпыт оптимизации кода (как платформонезависимой, так и ориентированной на конкретное \"железо\"). Знание скриптовых языков (<highlighttext>Python</highlighttext>, Shell, Perl, etc.). ",
+    "responsibility": "Совместно с командой предстоит разработка решений от этапа исследования и прототипирования до вывода в коммерческое использование. Разработка программного обеспечения ядра..."
+  },
+  {
+    "title": "Team Lead frontend (Vue Nuxt3)",
+    "place": "Москва",
+    "salary_lower_limit": 250000,
+    "salary_upper_limit": 380000,
+    "salary_currency": "RUR",
+    "requirement": "Умение разбираться в чужом коде. Базовые знания языка <highlighttext>Python</highlighttext>, понимания работы фреймворка Django. Умение писать unit-тесты. Опыт работы с...",
+    "responsibility": "Вы будете участвовать в проработке технических решений: code review, развитие архитектуры. Заниматься организацией работы команды: проведение тех собеседований, развитие, мотивация..."
+  },
+  {
+    "title": "Middle + / Senior Python Developer",
+    "place": "Москва",
+    "salary_lower_limit": 300000,
+    "salary_upper_limit": 370000,
+    "salary_currency": "RUR",
+    "requirement": "С опытом написания в django. С опытом работы с RabbitMQ. Уверенный Linux. Будет плюсом: - опыт в разработке облачных платформ или...",
+    "responsibility": "Принимать участие в переработке legacy-части платформы: - миграция на актуальную архитектуру и фреймворки. - исправление бизнес-логики с учётом обновления инфраструктурных..."
+  }
+]
