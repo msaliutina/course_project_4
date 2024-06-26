@@ -19,8 +19,8 @@ def user_interaction():
         vacancy_dict = vacancy.to_dict()
         vacancies_list_ed.append(Vacancy.from_dict(vacancy_dict))
     top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-    salary_range_lower = get_salary_range("Введите нижние границы зарплат в скобках: ")
-    salary_range_upper = get_salary_range("Введите верхние границы зарплат в скобках: ")
+    salary_range_lower = get_salary_range("Введите нижние границы зарплат (одно или два числа через запятую): ")
+    salary_range_upper = get_salary_range("Введите верхние границы зарплат (одно или два числа через запятую): ")
     prompt = input("Введите ключевые слова для фильтрации вакансий: ")
     salary_currency = input("Введите желаемую валюту зарплаты: ")
     filtered_vacancies = filter_vacancies_by_prompt(vacancies_list_ed, prompt)
@@ -36,8 +36,10 @@ def user_interaction():
     json_storage = JSONVacanciesStorage(file_path_2)
     json_storage.add_vacancy(top_vacancies)
     json_storage.get_all_vacancies()
-    #по желанию можно стереть json файл
-    #json_storage.clear()
+    print('Список вакансий находится в файле selected_vacancies.json в папке data')
+    clean_file = input("Хотите стереть список вакансий в файле (да/нет)? ").lower()
+    if clean_file == 'да':
+        json_storage.clear()
 
 if __name__ == "__main__":
     user_interaction()
