@@ -17,10 +17,16 @@ def get_salary_range(prompt):
     user_input = input(prompt)
     if user_input.strip():  # Проверка на непустой ввод
         try:
-            return ast.literal_eval(user_input)
+            user_input = user_input.strip()
+            if ',' not in user_input:
+                # Если введено одно число, используем его как нижний или верхний предел
+                value = int(user_input)
+                return (value, None)  # Нижний предел
+            else:
+                return ast.literal_eval(user_input)
         except (SyntaxError, ValueError):
-            print("Некорректный ввод. Используйте формат (min, max).")
-            return get_salary_range(prompt)  # Повторный запрос ввода в случае ошибки
+            print("Некорректный ввод. Используйте формат (min, max) или одно число.")
+            return get_salary_range(prompt)
     else:
         return None, None
 def filter_vacancies_by_salary(vacancies: list[Vacancy],
@@ -30,18 +36,26 @@ def filter_vacancies_by_salary(vacancies: list[Vacancy],
     '''Фильтрует список вакансий по заданным условиям зарплаты и валюте'''
     if salary_currency is not None:
         vacancies = [item for item in vacancies if salary_currency == item.salary_currency]
-    if salary_lower_limit_range:
-        r_min, r_max = salary_lower_limit_range
-        if r_min is not None:
-            vacancies = [item for item in vacancies if r_min <= item.salary_lower_limit]
-        if r_max is not None:
-            vacancies = [item for item in vacancies if r_max >= item.salary_lower_limit]
-    if salary_upper_limit_range:
-        r_min, r_max = salary_upper_limit_range
-        if r_min is not None:
-            vacancies = [item for item in vacancies if r_min <= item.salary_upper_limit]
-        if r_max is not None:
-            vacancies = [item for item in vacancies if r_max >= item.salary_upper_limit]
+
+    lower_min, lower_max = salary_lower_limit_range
+    upper_min, upper_max = salary_upper_limit_range
+
+    if lower_min is not None or lower_max is not None:
+        if lower_min is not None and lower_max is not None:
+            vacancies = [item for item in vacancies if lower_min <= item.salary_lower_limit <= lower_max]
+        else:
+            vacancies = [item for item in vacancies if
+                         (lower_min is None or item.salary_lower_limit >= lower_min) and
+                         (lower_max is None or item.salary_lower_limit >= lower_max)]
+
+    if upper_min is not None or upper_max is not None:
+        if upper_min is not None and upper_max is not None:
+            vacancies = [item for item in vacancies if upper_min <= item.salary_upper_limit <= upper_max]
+        else:
+            vacancies = [item for item in vacancies if
+                         (upper_min is None or item.salary_upper_limit <= upper_min) and
+                         (upper_max is None or item.salary_upper_limit <= upper_max)]
+
     return vacancies
 
 
